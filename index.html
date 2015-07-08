@@ -24,6 +24,7 @@ var App = React.createClass({
     return (
       <div>
         <input type="text" onChange={this.update} />
+        <h1>{this.props.txt}</h1>
         <h1>{this.state.txt}</h1>
       </div>
     );
