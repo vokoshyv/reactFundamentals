@@ -13,8 +13,7 @@
 var App = React.createClass({
   getInitialState: function(){
     return {
-      txt: 'the state txt', 
-      id: 0
+      txt: ''
     }
   }, 
   update: function(e){
@@ -23,13 +22,27 @@ var App = React.createClass({
   render: function(){
     return (
       <div>
-        <input type="text" onChange={this.update} />
-        <h1>{this.props.txt}</h1>
-        <h1>{this.state.txt}</h1>
+        <Widget txt={this.state.txt} update={this.update} />
+        <Widget txt={this.state.txt} update={this.update} />
+        <Widget txt={this.state.txt} update={this.update} />
+        <Widget txt={this.state.txt} update={this.update} />
+        <Widget txt={this.state.txt} update={this.update} />
       </div>
     );
   }
 });
+
+var Widget = React.createClass({
+  render: function(){
+    return (
+      <div>
+        <input type="text" onChange={this.props.update} />
+        <br />
+        <b>{this.props.txt}</b>
+      </div>
+    );
+  }
+})
 
 React.render(<App txt='the prop txt' />, document.body);
 
