@@ -1,54 +1,15 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Hello World</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/react.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/JSXTransformer.js"></script>
-</head>
-<body>
-
-<script type="text/jsx">
-
-var App = React.createClass({
-  render: function(){
-    return <Button>I <Heart /> hello</Button>
-  }
-});
-
-var Button = React.createClass({
-  render: function(){
-    return <button>{this.props.children}</button>
-  }
-});
-
-var Heart = React.createClass({
-  render: function(){
-    return <a> heart </a>
-  }
-})
-
-React.render(<App />, document.body);
-
-</script>
-
-<script>
-
-  // var App = React.createClass({
-  //   render: function(){
-  //     return React.DOM.h1(null, "Hi there")
-  //   }
-  // });
-
-  // var App = React.createClass({
-  //   render: function(){
-  //     return React.createElement("h1", null, "Yo")
-  //   }
-  // });
-
-  // React.render(React.createElement(App), document.body);
-
-</script>
-
-</body>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script src="dist/bundle.js"></script>
+  </body>
 </html>
